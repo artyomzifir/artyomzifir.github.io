@@ -1,0 +1,101 @@
+{
+  "generated": "2026-05-19T08:04:39.054Z",
+  "langs": {
+    "en": {
+      "meta": [
+        "content/en/meta.md"
+      ],
+      "experience": {
+        "hard": [
+          "content/en/experience/hard/llm-swarm.md",
+          "content/en/experience/hard/pcb-inspector.md",
+          "content/en/experience/hard/project-fabian.md",
+          "content/en/experience/hard/yandex-cloud.md"
+        ],
+        "soft": [
+          "content/en/experience/soft/drive-hack.md",
+          "content/en/experience/soft/inntendo.md",
+          "content/en/experience/soft/tutorship.md",
+          "content/en/experience/soft/volunteer-olympiad.md"
+        ]
+      },
+      "projects": {
+        "hard": [
+          "content/en/projects/hard/cinematic-nav.md",
+          "content/en/projects/hard/total-control.md"
+        ],
+        "soft": [
+          "content/en/projects/soft/innopolis-tycoon.md",
+          "content/en/projects/soft/smart-tank.md"
+        ]
+      },
+      "education": [
+        "content/en/education/innopolis.md",
+        "content/en/education/product-engineering.md",
+        "content/en/education/tech-comm.md",
+        "content/en/education/vk-cpp.md",
+        "content/en/education/yandex-ml.md"
+      ],
+      "awards": {
+        "hard": [
+          "content/en/awards/hard/russia-championship.md",
+          "content/en/awards/hard/tenderhack.md",
+          "content/en/awards/hard/yandex-top150.md"
+        ],
+        "soft": [
+          "content/en/awards/soft/inntendo-award.md",
+          "content/en/awards/soft/tutor-award.md",
+          "content/en/awards/soft/worldskills.md"
+        ]
+      }
+    },
+    "ru": {
+      "meta": [
+        "content/ru/meta.md"
+      ],
+      "experience": {
+        "hard": [
+          "content/ru/experience/hard/llm-swarm.md",
+          "content/ru/experience/hard/pcb-inspector.md",
+          "content/ru/experience/hard/project-fabian.md",
+          "content/ru/experience/hard/yandex-cloud.md"
+        ],
+        "soft": [
+          "content/ru/experience/soft/drive-hack.md",
+          "content/ru/experience/soft/inntendo.md",
+          "content/ru/experience/soft/tutorship.md",
+          "content/ru/experience/soft/volunteer-olympiad.md"
+        ]
+      },
+      "projects": {
+        "hard": [
+          "content/ru/projects/hard/cinematic-nav.md",
+          "content/ru/projects/hard/total-control.md"
+        ],
+        "soft": [
+          "content/ru/projects/soft/innopolis-tycoon.md",
+          "content/ru/projects/soft/smart-tank.md"
+        ]
+      },
+      "education": [
+        "content/ru/education/innopolis.md",
+        "content/ru/education/product-engineering.md",
+        "content/ru/education/tech-comm.md",
+        "content/ru/education/vk-cpp.md",
+        "content/ru/education/yandex-ml.md"
+      ],
+      "awards": {
+        "hard": [
+          "content/ru/awards/hard/russia-championship.md",
+          "content/ru/awards/hard/tenderhack.md",
+          "content/ru/awards/hard/yandex-top150.md"
+        ],
+        "soft": [
+          "content/ru/awards/soft/inntendo-award.md",
+          "content/ru/awards/soft/tutor-award.md",
+          "content/ru/awards/soft/worldskills.md"
+        ]
+      }
+    }
+  }
+}
