@@ -10,7 +10,7 @@ stats_hard:
     label: "Russia Championship · Robotics"
   - num: "2nd"
     label: "Tenderhack 2026 · NLP/Ranking"
-  - num: "8+"
+  - num: "10+"
     label: "engineering projects"
 stats_soft:
   - num: "150+"

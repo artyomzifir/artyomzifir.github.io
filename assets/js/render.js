@@ -411,9 +411,16 @@ async function init() {
   // update lang button
   const lb = document.querySelector('.lang-current');
   if (lb) lb.textContent = STATE.lang.toUpperCase();
-  const res = await fetch('manifest.json');
-  STATE.manifest = await res.json();
-  await renderAll();
+  try {
+    const res = await fetch('manifest.json');
+    if (!res.ok) throw new Error('manifest.json ' + res.status);
+    STATE.manifest = await res.json();
+    await renderAll();
+  } catch (err) {
+    console.error('Portfolio init failed:', err);
+    const w = document.querySelector('.wrap');
+    if (w) w.innerHTML = '<div style="padding:40px;color:var(--accent);font-family:monospace">Error: ' + err.message + '</div>';
+  }
 }
 
 document.addEventListener('DOMContentLoaded', init);
