@@ -1,10 +1,6 @@
-# Portfolio — Artyom Tuzov
+# [Portfolio — Artyom Tuzov](https://artyomzifir.github.io/)
 
 Personal portfolio site with **Hard** (ML/CV/Robotics) and **Soft** (Community/Leadership) modes, EN/RU language switch, and a content system based on plain Markdown files.
-
-## Live
-
----
 
 ## Stack
 
@@ -16,8 +12,6 @@ Personal portfolio site with **Hard** (ML/CV/Robotics) and **Soft** (Community/L
 | Deploy | GitHub Actions → Cloudflare Pages |
 
 No build step, no framework, no npm. Just files.
-
----
 
 ## Adding content
 
@@ -74,8 +68,6 @@ courses_hard: ["Applied ML", "Computer Vision", "ROS2"]
 courses_soft: ["Product Engineering", "Technical Communication"]
 ```
 
----
-
 ## Config
 
 Edit `config.js` to change anything visual — no CSS knowledge needed:
@@ -89,8 +81,6 @@ CONFIG.layout.border_radius = "12px"
 ```
 
 Changes apply on reload.
-
----
 
 ## Local dev
 

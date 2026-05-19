@@ -1,18 +1,19 @@
 ---
 id: innopolis-tycoon
-name: "Innopolis Tycoon — Game Dev Project"
-meta: "Jun – Jul 2024 · PM & Tech Writer"
-tags: ["Game Dev", "PM", "Agile", "Docs"]
+name: "Innopolis Tycoon — First Full PM Cycle"
+meta: "Jun – Jul 2024 · Project Manager & Tech Writer"
+tags: ["PM", "Agile", "Client work", "Docs", "Game Dev"]
 link: "https://dmitrii-bargan.itch.io/innopolis-tycoon"
 stack: "Team management · Documentation · Agile"
 order: 2
 mode: soft
-problem: "Customer-ordered tycoon game integrating the university experience."
-solution: "2-month sprint with Agile workflow, customer meetings, full documentation."
-result: "Shipped on time, grade Excellent. Live on itch.io."
+problem: "Customer-ordered tycoon game integrating the university experience — real client, real requirements, fixed deadline."
+solution: "2-month sprint: Agile workflow, bi-weekly client meetings, full documentation from requirements to delivery."
+result: "Shipped on time, grade Excellent. First experience owning the full PM cycle — requirements to handoff."
 ---
 
 ## bullets
-- Organized customer meetings, managed requirements and scope
-- Prepared all project documentation and presentations
-- PM and technical writer across the full lifecycle
+- First full PM cycle: gathered requirements, ran client meetings, managed scope and changes
+- Maintained project documentation: specs, meeting notes, progress reports, presentations
+- Coordinated team of developers using Agile (sprints, backlog, retrospectives)
+- Delivered working product matching client requirements within 2 months

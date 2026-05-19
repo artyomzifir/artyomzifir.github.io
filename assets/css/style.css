@@ -262,6 +262,33 @@ section { padding: 28px 0; }
 }
 .course-chip:hover { background: var(--as); border-color: var(--accent); color: var(--accent); }
 
+/* Expandable course cards */
+.course-card {
+  border: 1px solid var(--line); border-radius: 8px;
+  background: var(--bg2); overflow: hidden;
+  transition: border-color 0.2s, background 0.2s;
+  width: 100%;
+}
+.course-card[open] { border-color: var(--accent); background: var(--card); }
+.course-card-summary {
+  cursor: pointer; list-style: none;
+  padding: 7px 12px; display: flex; align-items: center;
+  justify-content: space-between; gap: 8px; user-select: none;
+}
+.course-card-summary::-webkit-details-marker { display: none; }
+.course-card-name {
+  font-size: 12px; font-weight: 600; color: var(--fg2);
+  font-family: 'Azeret Mono', monospace; transition: color 0.2s;
+}
+.course-card[open] .course-card-name { color: var(--accent); }
+.course-chevron { font-size: 13px; color: var(--faint); transition: transform 0.25s; flex-shrink: 0; }
+.course-card[open] .course-chevron { transform: rotate(180deg); }
+.course-card-body {
+  padding: 0 12px 10px; font-size: 12px; color: var(--fg2);
+  line-height: 1.6; border-top: 1px solid var(--line);
+  padding-top: 8px; font-weight: var(--fw-body);
+}
+
 /* ── Cards ── */
 .exp-card, .proj-card {
   border: 1px solid var(--line); border-radius: var(--r);
@@ -302,6 +329,21 @@ details[open] .sum-chevron { transform: rotate(180deg); }
 .kv-key { font-family: 'Azeret Mono', monospace; font-size: 10px; font-weight: 600; color: var(--muted); }
 .kv-val { color: var(--fg2); font-weight: var(--fw-body); }
 
+/* ── Contacts strip ── */
+.contacts-strip {
+  display: flex; align-items: center; flex-wrap: wrap; gap: 10px;
+  padding: 14px 0 20px; border-bottom: 1px solid var(--line); margin-bottom: 28px;
+}
+.strip-left { flex-shrink: 0; }
+.strip-links { display: flex; flex-wrap: wrap; gap: 6px; }
+.contact-pill {
+  display: inline-flex; align-items: center; gap: 4px;
+  padding: 5px 12px; font-size: 12px; font-weight: 500;
+  color: var(--fg2); background: var(--card);
+  border: 1px solid var(--line); border-radius: 999px; transition: all 0.2s;
+}
+.contact-pill:hover { border-color: var(--accent); color: var(--accent); background: var(--as); }
+
 /* ── Awards ── */
 .awards-list { display: flex; flex-direction: column; gap: 8px; }
 .award-item {
@@ -310,8 +352,12 @@ details[open] .sum-chevron { transform: rotate(180deg); }
 }
 .award-item:hover { border-color: var(--accent); }
 .award-top { display: flex; align-items: flex-start; gap: 14px; }
-.award-year { font-family: 'Azeret Mono', monospace; font-size: 11px; font-weight: 600; color: var(--accent); white-space: nowrap; padding-top: 2px; min-width: 60px; }
-.award-name { font-size: 14px; font-weight: var(--fw-heading); color: var(--fg); margin-bottom: 5px; }
+.award-year {
+  font-family: 'Azeret Mono', monospace; font-size: 11px; font-weight: 600;
+  color: var(--accent); white-space: nowrap; padding-top: 2px; flex-shrink: 0;
+}
+.award-body { min-width: 0; flex: 1; }
+.award-name { font-size: 14px; font-weight: var(--fw-heading); color: var(--fg); margin-bottom: 4px; }
 .award-desc { font-size: 12.5px; color: var(--fg2); line-height: 1.6; font-weight: var(--fw-body); }
 .award-meta { font-size: 11px; color: var(--muted); margin-top: 4px; font-family: 'Azeret Mono', monospace; }
 
@@ -338,4 +384,54 @@ details[open] .sum-chevron { transform: rotate(180deg); }
   .hero-name { font-size: 22px; }
   .stats { grid-template-columns: 1fr; }
   .skills-grid { grid-template-columns: 1fr; }
+}
+
+/* ── Course cards (expandable) ── */
+.courses-grid { display: flex; flex-direction: column; gap: 5px; }
+.course-chip {
+  display: inline-block;
+  padding: 4px 11px; font-size: 12px; font-weight: 500;
+  color: var(--fg2); background: var(--bg2);
+  border: 1px solid var(--line); border-radius: 6px;
+  font-family: 'Azeret Mono', monospace; cursor: default;
+  transition: background 0.2s, border-color 0.2s, color 0.2s;
+  margin: 2px;
+}
+.course-chip:hover { background: var(--as); border-color: var(--accent); color: var(--accent); }
+.course-card {
+  border: 1px solid var(--line); border-radius: 8px;
+  background: var(--bg2); overflow: hidden;
+  transition: border-color 0.2s;
+}
+.course-card:hover { border-color: var(--faint); }
+.course-card[open] { border-color: var(--accent); background: var(--bg3); }
+.course-card-summary {
+  cursor: pointer; list-style: none;
+  padding: 8px 14px; display: flex;
+  align-items: center; justify-content: space-between;
+  gap: 8px; user-select: none;
+  font-family: 'Azeret Mono', monospace; font-size: 11.5px;
+  font-weight: 600; color: var(--fg2);
+}
+.course-card-summary::-webkit-details-marker { display: none; }
+.course-card[open] .course-card-summary { color: var(--accent); }
+.course-chevron { font-size: 13px; color: var(--faint); transition: transform 0.25s; flex-shrink: 0; }
+.course-card[open] .course-chevron { transform: rotate(180deg); }
+.course-card-body {
+  padding: 6px 14px 10px;
+  font-size: 12px; color: var(--fg2); line-height: 1.6;
+  border-top: 1px solid var(--line);
+  font-weight: var(--fw-body);
+}
+
+/* ── Cyrillic font fix for soft mode ── */
+/* Comfortaa has no Cyrillic — use Nunito in RU soft */
+[data-lang="ru"][data-mode="soft"] .hero-name,
+[data-lang="ru"][data-mode="soft"] .section-title,
+[data-lang="ru"][data-mode="soft"] .sum-name,
+[data-lang="ru"][data-mode="soft"] .edu-title,
+[data-lang="ru"][data-mode="soft"] .stat-num,
+[data-lang="ru"][data-mode="soft"] .logo,
+[data-lang="ru"][data-mode="soft"] .av-placeholder {
+  font-family: 'Nunito', sans-serif !important;
 }

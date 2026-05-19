@@ -1,5 +1,5 @@
 {
-  "generated": "2026-05-19T08:04:39.054Z",
+  "generated": "2026-05-19T10:08:24.733Z",
   "langs": {
     "en": {
       "meta": [
@@ -10,42 +10,47 @@
           "content/en/experience/hard/llm-swarm.md",
           "content/en/experience/hard/pcb-inspector.md",
           "content/en/experience/hard/project-fabian.md",
+          "content/en/experience/hard/project-fly.md",
+          "content/en/experience/hard/total-control-docs.md",
           "content/en/experience/hard/yandex-cloud.md"
         ],
         "soft": [
           "content/en/experience/soft/drive-hack.md",
           "content/en/experience/soft/inntendo.md",
+          "content/en/experience/soft/tg-channel.md",
           "content/en/experience/soft/tutorship.md",
-          "content/en/experience/soft/volunteer-olympiad.md"
+          "content/en/experience/soft/volunteer-olympiad.md",
+          "content/en/experience/soft/yandex-ambassador.md"
         ]
       },
       "projects": {
         "hard": [
+          "content/en/projects/hard/autmobrob-waypoints.md",
+          "content/en/projects/hard/bug-navigation.md",
           "content/en/projects/hard/cinematic-nav.md",
+          "content/en/projects/hard/pmldl-mnist.md",
+          "content/en/projects/hard/rtab-slam.md",
+          "content/en/projects/hard/smart-tank.md",
           "content/en/projects/hard/total-control.md"
         ],
-        "soft": [
-          "content/en/projects/soft/innopolis-tycoon.md",
-          "content/en/projects/soft/smart-tank.md"
-        ]
+        "soft": []
       },
       "education": [
-        "content/en/education/innopolis.md",
-        "content/en/education/product-engineering.md",
-        "content/en/education/tech-comm.md",
-        "content/en/education/vk-cpp.md",
-        "content/en/education/yandex-ml.md"
+        "content/en/education/innopolis.md"
       ],
       "awards": {
         "hard": [
           "content/en/awards/hard/russia-championship.md",
           "content/en/awards/hard/tenderhack.md",
-          "content/en/awards/hard/yandex-top150.md"
+          "content/en/awards/hard/worldskills.md"
         ],
         "soft": [
           "content/en/awards/soft/inntendo-award.md",
-          "content/en/awards/soft/tutor-award.md",
-          "content/en/awards/soft/worldskills.md"
+          "content/en/awards/soft/iu-award-2026.md",
+          "content/en/awards/soft/iu-club-letters.md",
+          "content/en/awards/soft/iu-thank-you-letters.md",
+          "content/en/awards/soft/studvesna-2024.md",
+          "content/en/awards/soft/tutor-award.md"
         ]
       }
     },
@@ -58,42 +63,47 @@
           "content/ru/experience/hard/llm-swarm.md",
           "content/ru/experience/hard/pcb-inspector.md",
           "content/ru/experience/hard/project-fabian.md",
+          "content/ru/experience/hard/project-fly.md",
+          "content/ru/experience/hard/total-control-docs.md",
           "content/ru/experience/hard/yandex-cloud.md"
         ],
         "soft": [
           "content/ru/experience/soft/drive-hack.md",
           "content/ru/experience/soft/inntendo.md",
+          "content/ru/experience/soft/tg-channel.md",
           "content/ru/experience/soft/tutorship.md",
-          "content/ru/experience/soft/volunteer-olympiad.md"
+          "content/ru/experience/soft/volunteer-olympiad.md",
+          "content/ru/experience/soft/yandex-ambassador.md"
         ]
       },
       "projects": {
         "hard": [
+          "content/ru/projects/hard/autmobrob-waypoints.md",
+          "content/ru/projects/hard/bug-navigation.md",
           "content/ru/projects/hard/cinematic-nav.md",
+          "content/ru/projects/hard/pmldl-mnist.md",
+          "content/ru/projects/hard/rtab-slam.md",
+          "content/ru/projects/hard/smart-tank.md",
           "content/ru/projects/hard/total-control.md"
         ],
-        "soft": [
-          "content/ru/projects/soft/innopolis-tycoon.md",
-          "content/ru/projects/soft/smart-tank.md"
-        ]
+        "soft": []
       },
       "education": [
-        "content/ru/education/innopolis.md",
-        "content/ru/education/product-engineering.md",
-        "content/ru/education/tech-comm.md",
-        "content/ru/education/vk-cpp.md",
-        "content/ru/education/yandex-ml.md"
+        "content/ru/education/innopolis.md"
       ],
       "awards": {
         "hard": [
           "content/ru/awards/hard/russia-championship.md",
           "content/ru/awards/hard/tenderhack.md",
-          "content/ru/awards/hard/yandex-top150.md"
+          "content/ru/awards/hard/worldskills.md"
         ],
         "soft": [
           "content/ru/awards/soft/inntendo-award.md",
-          "content/ru/awards/soft/tutor-award.md",
-          "content/ru/awards/soft/worldskills.md"
+          "content/ru/awards/soft/iu-award-2026.md",
+          "content/ru/awards/soft/iu-club-letters.md",
+          "content/ru/awards/soft/iu-thank-you-letters.md",
+          "content/ru/awards/soft/studvesna-2024.md",
+          "content/ru/awards/soft/tutor-award.md"
         ]
       }
     }
