@@ -20,23 +20,25 @@ const CONFIG = {
   default_mode: "hard",
   default_lang: "en",
 
-  // ── Hard mode palette — dark, easier on eyes ──
+  // ── Hard mode palette — deep ocean → lime ──
+  // Base palette: #071A52 (deep navy), #086972 (teal),
+  //               #17B978 (emerald), #A7FF83 (lime).
   hard: {
-    bg:          "#0D0F0D",
-    bg2:         "#141814",
-    bg3:         "#1A1F1A",
-    fg:          "#DCE8DC",
-    fg2:         "#9AB09A",
-    muted:       "#527052",
-    faint:       "#2A3D2A",
-    line:        "#1C2A1C",
-    accent:      "#3AAD1E",
-    accent2:     "#52C436",
-    card:        "rgba(20,24,20,0.94)",
-    card_hover:  "rgba(26,31,26,0.99)",
+    bg:          "#050E2E",            // even deeper than base for body
+    bg2:         "#0A1E55",            // base navy
+    bg3:         "#0E2D6B",            // mid step toward teal
+    fg:          "#E7F4EA",            // warm white with green undertone
+    fg2:         "#A8C8B5",            // softened mint
+    muted:       "#5F8678",            // mid teal-grey
+    faint:       "#1B3360",            // dark line accent
+    line:        "#143063",            // subtle border
+    accent:      "#17B978",            // emerald — primary accent
+    accent2:     "#A7FF83",            // lime — hover / highlight
+    card:        "rgba(8,21,64,0.55)",        // translucent for glass effect
+    card_hover:  "rgba(14,45,107,0.70)",      // hovered glass card
   },
 
-  // ── Soft mode palette — warm peach ────────
+  // ── Soft mode palette — warm peach (unchanged) ──
   soft: {
     bg:          "#FAF3E1",
     bg2:         "#F2E6C8",
@@ -48,18 +50,19 @@ const CONFIG = {
     line:        "#E0CDA8",
     accent:      "#E05A10",
     accent2:     "#C44A08",
-    card:        "rgba(255,248,232,0.92)",
-    card_hover:  "rgba(255,253,244,0.99)",
+    card:        "rgba(255,248,232,0.65)",
+    card_hover:  "rgba(255,253,244,0.85)",
   },
 
   // ── Typography ────────────────────────────
+  // All four faces support Cyrillic, so RU and EN render in the same fonts.
   fonts: {
-    hard_heading:   "'Azeret Mono', monospace",
+    hard_heading:   "'JetBrains Mono', monospace",
     hard_body:      "'Inter', sans-serif",
     soft_heading:   "'Comfortaa', cursive",
     soft_body:      "'Inter', sans-serif",
-    mono:           "'Azeret Mono', monospace",
-    google_fonts:   "https://fonts.googleapis.com/css2?family=Azeret+Mono:wght@400;500;600;700&family=Comfortaa:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap",
+    mono:           "'JetBrains Mono', monospace",
+    google_fonts:   "https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Comfortaa:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap",
   },
 
   // ── Type scale ────────────────────────────
@@ -85,7 +88,7 @@ const CONFIG = {
   // ── Spacing & shape ───────────────────────
   layout: {
     max_width:     "900px",
-    border_radius: "12px",
+    border_radius: "14px",
     card_padding:  "14px 18px",
   },
 

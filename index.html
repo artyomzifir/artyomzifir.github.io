@@ -7,10 +7,22 @@
 <meta name="description" content="ML/CV Engineer specializing in robotics. Champion of Russia in robotics programming."/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link href="https://fonts.googleapis.com/css2?family=Azeret+Mono:wght@400;500;600;700&family=Comfortaa:wght@400;500;600;700&family=Nunito:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<!--
+  All families requested with cyrillic subset so RU and EN render in identical typefaces.
+  JetBrains Mono replaces Azeret Mono (Azeret Mono has no Cyrillic glyphs on Google Fonts).
+  Comfortaa includes Cyrillic since 2018.
+-->
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Comfortaa:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
 <link rel="stylesheet" href="assets/css/style.css"/>
 </head>
 <body>
+
+<!-- Frosted background gradient layers (positioned behind everything) -->
+<div class="bg-gradient" aria-hidden="true">
+  <div class="bg-blob bg-blob-1"></div>
+  <div class="bg-blob bg-blob-2"></div>
+  <div class="bg-blob bg-blob-3"></div>
+</div>
 
 <nav class="topbar">
   <div class="topbar-inner">
@@ -28,8 +40,8 @@
       </button>
       <div class="mode-toggle" onclick="toggleMode()">
         <div class="toggle-track">
+          <span class="toggle-pill" aria-hidden="true"></span>
           <span class="toggle-label hard-label">Hard</span>
-          <span class="toggle-knob"></span>
           <span class="toggle-label soft-label">Soft</span>
         </div>
       </div>
