@@ -1,5 +1,5 @@
 {
-  "generated": "2026-05-19T21:17:01.435Z",
+  "generated": "2026-05-20T09:49:09.576Z",
   "meta": [
     "content/meta.md"
   ],
@@ -31,16 +31,10 @@
       "content/projects/hard/smart-tank.md",
       "content/projects/hard/total-control.md"
     ],
-    "soft": [
-      "content/projects/soft/innopolis-tycoon.md"
-    ]
+    "soft": []
   },
   "education": [
-    "content/education/innopolis.md",
-    "content/education/product-engineering.md",
-    "content/education/tech-comm.md",
-    "content/education/vk-cpp.md",
-    "content/education/yandex-ml.md"
+    "content/education/innopolis.md"
   ],
   "awards": {
     "hard": [
