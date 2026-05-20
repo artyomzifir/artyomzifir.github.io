@@ -12,8 +12,8 @@ const CONFIG = {
   github:   "artyomzifir",
   vk:       "artyomzifir",
   bluesky:  "artyomzifir.bsky.social",
-  cv_en:    "https://rxresu.me/artyomzifir/cv-en",   // update with real link
-  cv_ru:    "https://rxresu.me/artyomzifir/cv-ru",   // update with real link
+  cv_en:    "https://rxresu.me/artem.a.tuzov/git-en",   // update with real link
+  cv_ru:    "https://rxresu.me/artem.a.tuzov/git-ru",   // update with real link
   photo:    "assets/media/photo.jpg",
 
   // ── Modes ─────────────────────────────────
