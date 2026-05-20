@@ -264,7 +264,7 @@ function renderContactsStrip() {
       <a class="contact-pill" href="https://t.me/${C.telegram}" target="_blank" rel="noreferrer">@${C.telegram}</a>
       <a class="contact-pill" href="https://vk.ru/${C.vk}" target="_blank" rel="noreferrer">VK</a>
       <a class="contact-pill" href="https://${C.bluesky}" target="_blank" rel="noreferrer">Bluesky</a>
-      <a class="contact-pill" href="https://github.com/${C.github}" target="_blank" rel="noreferrer">⌂ GitHub</a>
+      <a class="contact-pill" href="https://github.com/${C.github}" target="_blank" rel="noreferrer">GitHub</a>
     </div>
   `;
 }
