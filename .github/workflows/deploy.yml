@@ -5,22 +5,96 @@ on:
     branches: [main]
   workflow_dispatch:
 
+# Only one concurrent deployment; cancel in-progress runs but let queued ones finish.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
 jobs:
-  deploy:
+  # ─────────────────────────────────────────────
+  # 1. BUILD — regenerate manifest.json, commit it back, upload artifact
+  # ─────────────────────────────────────────────
+  build:
     runs-on: ubuntu-latest
     permissions:
-      contents: write
+      contents: write   # needed to commit refreshed manifest.json back to main
 
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          # default token doesn't trigger downstream workflows on push;
+          # that's fine here, we don't want a loop.
+          fetch-depth: 0
 
-      - name: Generate content manifest
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Regenerate manifest.json
         run: node scripts/build-manifest.js
 
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v4
+      - name: Sanity-check content (only if scripts/check.js exists)
+        run: |
+          if [ -f scripts/check.js ]; then
+            node scripts/check.js
+          else
+            echo "scripts/check.js not present — skipping sanity check."
+          fi
+
+      - name: Commit refreshed manifest.json to main
+        # Only commit if it actually changed; skip when triggered from a tag or detached HEAD.
+        if: github.event_name == 'push' || github.event_name == 'workflow_dispatch'
+        run: |
+          if ! git diff --quiet manifest.json; then
+            git config user.name  "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add manifest.json
+            git commit -m "ci: refresh manifest.json [skip ci]"
+            git push
+          else
+            echo "manifest.json unchanged — nothing to commit."
+          fi
+
+      - name: Prepare deploy directory
+        # Copy only what the live site needs. Exclude scripts/, .github/, node_modules/, hidden files.
+        run: |
+          mkdir -p _site
+          rsync -a --delete \
+            --exclude='.git' \
+            --exclude='.github' \
+            --exclude='scripts' \
+            --exclude='node_modules' \
+            --exclude='_site' \
+            --exclude='*.log' \
+            --exclude='package*.json' \
+            ./ ./_site/
+          echo "Deployed tree:"
+          find _site -maxdepth 3 -type f | sort
+          echo ""
+          echo "manifest.json contents:"
+          cat _site/manifest.json
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: .
-          exclude_assets: '.github,scripts,node_modules'
+          path: _site
+
+  # ─────────────────────────────────────────────
+  # 2. DEPLOY — publish artifact to GitHub Pages
+  # ─────────────────────────────────────────────
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write       # to publish to Pages
+      id-token: write    # to verify deployment origin
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
