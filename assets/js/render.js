@@ -261,11 +261,11 @@ function renderContactsStrip() {
       <a class="btn-primary" href="${cvUrl}" target="_blank" rel="noreferrer">${cvLabel}</a>
     </div>
     <div class="strip-links">
-      <a class="contact-pill" href="mailto:${C.email}" title="Email">✉ ${C.email}</a>
-      <a class="contact-pill" href="https://t.me/${C.telegram}" target="_blank" rel="noreferrer">✈ @${C.telegram}</a>
+      <a class="contact-pill" href="mailto:${C.email}" title="Email">${C.email}</a>
+      <a class="contact-pill" href="https://t.me/${C.telegram}" target="_blank" rel="noreferrer">@${C.telegram}</a>
       <a class="contact-pill" href="https://vk.ru/${C.vk}" target="_blank" rel="noreferrer">VK</a>
       <a class="contact-pill" href="https://${C.bluesky}" target="_blank" rel="noreferrer">Bluesky</a>
-      <a class="contact-pill" href="https://github.com/${C.github}" target="_blank" rel="noreferrer">⌂ GitHub</a>
+      <a class="contact-pill" href="https://github.com/${C.github}" target="_blank" rel="noreferrer">GitHub</a>
     </div>
   `;
 }
