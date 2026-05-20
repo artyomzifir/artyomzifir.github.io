@@ -35,14 +35,14 @@ stats_soft_ru:
     label: "участников Drive Hack 2026"
   - num: "3+"
     label: "лет работы с сообществами"
-tagline_hard_en: "Applied ML/CV Engineer — specializing in robotics systems"
-tagline_hard_ru: "ML/CV-инженер — специализация на робототехнических системах"
-tagline_soft_en: "Community builder, ambassador, and technical mentor"
-tagline_soft_ru: "Строитель сообществ, амбассадор и технический наставник"
-pitch_hard_en: "Junior+ ML/CV engineer with end-to-end experience: from dataset annotation and model training to ROS2 deployment on real hardware. I build perception pipelines that run on Jetson, work with LLM control layers for robot swarms, and know the gap between mAP on a val set and what actually works on a robot."
-pitch_hard_ru: "Junior+ ML/CV-инженер с опытом полного цикла: от разметки датасетов и обучения моделей до деплоя в ROS2 на реальном железе. Строю пайплайны компьютерного зрения на Jetson, разрабатываю LLM-слой управления для роевых роботов. Знаю разницу между mAP на валидации и тем, что реально работает на роботе."
-pitch_soft_en: "I build communities and help people find their place in tech. Founded a student club of 150+ members, guided 60+ freshmen, ran a hackathon for 70+ participants as Y&&Y Ambassador, and volunteered at national robotics olympiads."
-pitch_soft_ru: "Строю сообщества и помогаю людям найти своё место в технологиях. Основал студенческий клуб на 150+ человек, сопровождал 60+ первокурсников, провёл хакатон на 70+ участников в рамках амбассадорства Y&&Y, волонтёрил на всероссийских олимпиадах."
+tagline_hard_en: "ML engineer working at the intersection of CV/DL and robotics"
+tagline_hard_ru: "ML-инженер на стыке CV/DL и робототехники"
+tagline_soft_en: "I explain things, bring people together, and help initiatives happen"
+tagline_soft_ru: "Объясняю сложное, собираю людей и помогаю инициативам случаться"
+pitch_hard_en: "I'm a student at Innopolis University and a practicing ML engineer. Strong at R&D and fast, solid prototypes that I can take all the way to integration and deployment. Python first, also work with C++. Comfortable with data pipelines and the classical CV/ML stack. Developing in LLM/VLM and using them as a tool for data processing and quality control. Good understanding of the physics of the task and how sensors work — capture, filtering, signal sync, basic ideas about navigation, kinematics, and control."
+pitch_hard_ru: "Студент Университета Иннополис и практикующий ML-инженер. Силён в R&D и быстрых, качественных прототипах, которые могу довести до интеграции и деплоя. Основной язык — Python, также работаю с C++. Уверенно владею пайплайнами данных и классическим стеком CV/ML. Развиваюсь в LLM/VLM и применяю их как инструмент для обработки и контроля качества данных. Хорошо понимаю физику задач и работу сенсоров — съём, фильтрация и синхронизация сигналов, базовые представления о навигации, кинематике и управлении."
+pitch_soft_en: "I develop community and public communications as a Young&&Yandex ambassador. I'm good at explaining complex things in simple terms, getting people behind initiatives, and building solid connections between students, faculty, and industry. Outside of that — I was a club lider of InnTendo gaming club (150+ members), guided 60+ freshmen across two cohorts as a tutor and academic mentor, and ran Drive Hack 2026 (70+ participants). I also volunteer at national robotics olympiads."
+pitch_soft_ru: "Развиваю комьюнити и публичные коммуникации как амбассадор Young&&Yandex. Умею объяснять сложное простым, собирать людей вокруг инициатив и выстраивать качественное взаимодействие между студентами, преподавателями и индустрией. Помимо этого — был лидером студенческого клуба по играм InnTendo (150+ человек), сопровождал 60+ первокурсников в двух потоках как тьютор и академический наставник, провёл Drive Hack 2026 (70+ участников). Волонтёрю на всероссийских олимпиадах по робототехнике."
 ---
 
 ## en
