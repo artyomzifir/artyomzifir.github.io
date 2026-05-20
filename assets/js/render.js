@@ -160,10 +160,11 @@ function applyConfig() {
   R.setProperty('--accent', p.accent); R.setProperty('--a2', p.accent2);
   R.setProperty('--as', `${p.accent}14`); R.setProperty('--am', `${p.accent}2a`);
   R.setProperty('--card', p.card); R.setProperty('--ch', p.card_hover);
-  // Comfortaa has no Cyrillic — use Nunito for RU soft
-  const softFont = STATE.lang === 'ru' ? "'Nunito', sans-serif" : CONFIG.fonts.soft_heading;
-  R.setProperty('--fh', m === 'hard' ? CONFIG.fonts.hard_heading : softFont);
-  R.setProperty('--fb', m === 'hard' ? CONFIG.fonts.hard_body : CONFIG.fonts.soft_body);
+  // Font family per mode. All four faces (Inter, JetBrains Mono, Comfortaa)
+  // include Cyrillic via the Google Fonts subset, so the same font is used
+  // for RU and EN. No per-language override.
+  R.setProperty('--fh', m === 'hard' ? CONFIG.fonts.hard_heading : CONFIG.fonts.soft_heading);
+  R.setProperty('--fb', m === 'hard' ? CONFIG.fonts.hard_body    : CONFIG.fonts.soft_body);
   R.setProperty('--hero-name-size', t.hero_name_size);
   R.setProperty('--hero-name-weight', t.hero_name_weight);
   R.setProperty('--section-size', t.section_size);
@@ -260,11 +261,11 @@ function renderContactsStrip() {
       <a class="btn-primary" href="${cvUrl}" target="_blank" rel="noreferrer">${cvLabel}</a>
     </div>
     <div class="strip-links">
-      <a class="contact-pill" href="mailto:${C.email}" title="Email">${C.email}</a>
-      <a class="contact-pill" href="https://t.me/${C.telegram}" target="_blank" rel="noreferrer">@${C.telegram}</a>
+      <a class="contact-pill" href="mailto:${C.email}" title="Email">✉ ${C.email}</a>
+      <a class="contact-pill" href="https://t.me/${C.telegram}" target="_blank" rel="noreferrer">✈ @${C.telegram}</a>
       <a class="contact-pill" href="https://vk.ru/${C.vk}" target="_blank" rel="noreferrer">VK</a>
       <a class="contact-pill" href="https://${C.bluesky}" target="_blank" rel="noreferrer">Bluesky</a>
-      <a class="contact-pill" href="https://github.com/${C.github}" target="_blank" rel="noreferrer">GitHub</a>
+      <a class="contact-pill" href="https://github.com/${C.github}" target="_blank" rel="noreferrer">⌂ GitHub</a>
     </div>
   `;
 }

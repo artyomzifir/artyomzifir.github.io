@@ -515,7 +515,7 @@ details[open] .sum-chevron { transform: rotate(180deg); color: var(--accent); }
   color: var(--accent); white-space: nowrap; padding-top: 2px; flex-shrink: 0;
 }
 .award-body { min-width: 0; flex: 1; }
-.award-name { font-size: 14px; font-weight: var(--fw-heading); color: var(--fg); margin-bottom: 4px; }
+.award-name { font-family: var(--fh); font-size: 14px; font-weight: var(--fw-heading); color: var(--fg); margin-bottom: 4px; transition: font-family var(--t-mode); }
 .award-desc { font-size: 12.5px; color: var(--fg2); line-height: 1.6; font-weight: var(--fw-body); }
 .award-meta { font-size: 11px; color: var(--muted); margin-top: 4px; font-family: var(--fh); }
 
