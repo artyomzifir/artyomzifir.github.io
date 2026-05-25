@@ -6,8 +6,8 @@ github: "https://github.com/IU-Capstone-Project-2025/total_control"
 tags: ["Sphinx", "Doxygen", "CI/CD", "GitHub Actions", "ROS2", "Mentoring"]
 name_en: "Total Control — Documentation & CI/CD"
 name_ru: "Total Control — Документация и CI/CD"
-meta_en: "Jun 2025 – present · Technical Writer / DevOps"
-meta_ru: "Июнь 2025 – н.в. · Технический писатель / DevOps"
+meta_en: "Jun 2025 – Aug 2025 · Technical Writer / DevOps"
+meta_ru: "Июнь 2025 – Август 2025 · Технический писатель / DevOps"
 ---
 
 ## en

@@ -17,7 +17,7 @@ ROS2 node for automated PCB assembly verification.
 ### bullets
 - Developed pcb_inspector ROS2 node: YOLO-based detection with geometry report (dx, dy, dw_rel, dh_rel, IoU)
 - Annotated Roboflow dataset (12 classes), trained YOLO11s
-- Results: mAP50 0.964 · mAP50-95 0.734 · precision 0.978 · recall 0.949 · 15.1 ms on RTX 3050
+- Results: mAP50 0.964 · mAP50-95 0.734 · precision 0.978 · recall 0.949 · 15.1 ms on RTX 3050m
 
 ## ru
 
@@ -26,4 +26,4 @@ ROS2-нода для автоматической верификации сбо�
 ### bullets
 - Разработана нода pcb_inspector: детекция компонентов YOLO + отчёт по геометрии (dx, dy, dw_rel, dh_rel, IoU)
 - Размечен датасет Roboflow (12 классов), обучена YOLO11s
-- Результат: mAP50 0.964 · mAP50-95 0.734 · precision 0.978 · recall 0.949 · 15.1 мс на RTX 3050
+- Результат: mAP50 0.964 · mAP50-95 0.734 · precision 0.978 · recall 0.949 · 15.1 мс на RTX 3050m

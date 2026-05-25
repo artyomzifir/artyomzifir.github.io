@@ -6,8 +6,8 @@ github: "https://github.com/IU-Capstone-Project-2025/ProjectFly"
 tags: ["STM32", "Embedded C", "Reed Switch", "UAV", "Hardware", "Testing"]
 name_en: "ProjectFly — Reed Switch Liquid Level Sensor"
 name_ru: "ProjectFly — Датчик уровня жидкости на геркон-переключателях"
-meta_en: "Jun 2025 – present · Hardware Engineer / Test Engineer"
-meta_ru: "Июнь 2025 – н.в. · Инженер по железу / Тест-инженер"
+meta_en: "Jun 2025 – Aug 2025 · Hardware Engineer / Test Engineer"
+meta_ru: "Июнь 2025 – Август 2025 · Инженер по железу / Тест-инженер"
 ---
 
 ## en
