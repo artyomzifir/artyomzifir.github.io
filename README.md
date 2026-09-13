@@ -14,12 +14,12 @@ The two files are independent sources, not translations of each other. Edit both
 | `Artyom_Tuzov_CV_RU.yaml` | Russian CV |
 | `zifir/` | Custom Typst theme |
 | `fonts/` | Montserrat and Nunito, picked up automatically |
-| `docs/` | GitHub Pages: language switcher plus the two latest PDFs |
+| `docs/` | GitHub Pages: language switcher, the two latest PDFs, and a `.webp` preview image of each |
 | `archive/` | Every previous render, kept as `Artyom_Tuzov_CV_<lang>_<date>_<sha>.pdf` |
 
 ## How it works
 
-`.github/workflows/render.yml` runs on every push to `main` that touches a `.yaml` file. It renders only the languages that changed, moves the old PDF into `archive/`, writes the new one into `docs/`, and commits both back. GitHub Pages serves `docs/` directly, so there is no deploy step.
+`.github/workflows/render.yml` runs on every push to `main` that touches a `.yaml` file. It renders only the languages that changed, moves the old PDF into `archive/`, writes the new one into `docs/` alongside a `.webp` preview (via `pdftoppm` + `cwebp`), and commits both back. GitHub Pages serves `docs/` directly, so there is no deploy step.
 
 A manual `workflow_dispatch` run re-renders both languages.
 
