@@ -1,0 +1,100 @@
+name: Render CV
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "*.yaml"
+      - ".github/workflows/render.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install RenderCV
+        run: pip install "rendercv[full]"
+
+      - name: Figure out which language(s) changed
+        id: changed
+        env:
+          BEFORE: ${{ github.event.before }}
+          AFTER: ${{ github.sha }}
+        run: |
+          # On workflow_dispatch, or a new branch's first push, there's no
+          # meaningful "before" commit to diff against - render everything.
+          if [ -z "$BEFORE" ] || [ "$BEFORE" = "0000000000000000000000000000000000000000" ]; then
+            echo "langs=EN RU" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          CHANGED_FILES=$(git diff --name-only "$BEFORE" "$AFTER" -- '*.yaml' || true)
+          LANGS=""
+          for LANG in EN RU; do
+            if echo "$CHANGED_FILES" | grep -q "Artyom_Tuzov_CV_${LANG}.yaml"; then
+              LANGS="$LANGS $LANG"
+            fi
+          done
+          echo "langs=$LANGS" >> "$GITHUB_OUTPUT"
+
+      - name: Render changed version(s) and archive the previous PDF
+        run: |
+          mkdir -p docs archive /tmp/render_out
+
+          for LANG in ${{ steps.changed.outputs.langs }}; do
+            SRC="Artyom_Tuzov_CV_${LANG}.yaml"
+            OLD="docs/Artyom_Tuzov_CV_${LANG}.pdf"
+            NEW="/tmp/render_out/Artyom_Tuzov_CV_${LANG}.pdf"
+
+            if [ ! -f "$SRC" ]; then
+              echo "Skipping $LANG, $SRC not found."
+              continue
+            fi
+
+            rendercv render "$SRC" \
+              --pdf-path "$NEW" \
+              --dont-generate-markdown \
+              --dont-generate-html \
+              --dont-generate-png
+
+            if [ -f "$OLD" ]; then
+              LAST_SHA=$(git log -1 --format=%h -- "$OLD")
+              LAST_DATE=$(git log -1 --format=%cd --date=format:%Y-%m-%d -- "$OLD")
+              ARCHIVE_NAME="archive/Artyom_Tuzov_CV_${LANG}_${LAST_DATE}_${LAST_SHA}.pdf"
+              cp "$OLD" "$ARCHIVE_NAME"
+              echo "Archived previous $LANG version -> $ARCHIVE_NAME"
+            else
+              echo "No previous $LANG version yet, nothing to archive."
+            fi
+
+            cp "$NEW" "$OLD"
+          done
+
+          if [ -z "${{ steps.changed.outputs.langs }}" ]; then
+            echo "No CV yaml changed in this push, nothing to render."
+          fi
+
+      - name: Commit rendered PDFs and archive
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add docs archive
+          if ! git diff --cached --quiet; then
+            git commit -m "Render CV [skip ci]"
+            git push
+          else
+            echo "Nothing to commit."
+          fi

@@ -1,0 +1,229 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/rendercv/rendercv/refs/tags/v2.8/schema.json
+cv:
+  name: Артём Тузов
+  headline: ML Engineer
+  email: a.tuzov.work@mail.ru
+  phone: "+7-987-220-1639"
+  social_networks:
+    - network: GitHub
+      username: artyomzifir
+    - network: Telegram
+      username: artyomzifir
+
+  sections:
+    Кратко:
+      - "Работаю в машинном обучении и робототехнике и на их стыке. Веду
+        прикладные ML-задачи полного цикла: от данных и экспериментов до
+        рабочего сервиса и передачи в продукт. Задачи: робототехника,
+        компьютерное зрение, агентные системы, NLP, RAG и поисковые системы.
+        Стек: Python, C++, PyTorch."
+
+    Образование:
+      - institution: Университет Иннополис
+        area: "Бакалавриат 3+1, анализ данных и ИИ, робототехнический трек. GPA 4.83 / 5.0, диплом в работе"
+        location: Иннополис
+        start_date: 2023-09
+        end_date: 2027-06
+
+    Опыт работы:
+      - company: MWS RnD
+        position: Research Engineer, стажировка, полный день, гибрид
+        location: Иннополис
+        start_date: 2026-06
+        end_date: present
+        highlights:
+          - "Переработал гибридный поиск в действующем проекте: слияние
+            лексической и векторной частей, реранкер, eval-контур на RAGBench по
+            recall@k, MRR@10 и nDCG@10"
+          - "Полный цикл ресёрч-задач: выбор темы, воспроизведение результатов
+            из статей, сборка демо, поиск внутреннего заказчика и передача
+            решения"
+          - "Предметные области: LLM, NLP, RAG, поисковые системы, агентные
+            системы"
+
+      - company: Университет Иннополис
+        position: Преподаватель ДПО, контракт, очно
+        location: Казань
+        start_date: 2026-07
+        end_date: 2026-08
+        highlights:
+          - 'Разработал с нуля материалы курса "Специалист по работе с системами
+            искусственного интеллекта" на 72 часа для 20 слушателей: прикладной
+            Python, генеративные модели, дообучение и сервисы поверх них'
+          - Вёл занятия очно и по ВКС, принимал итоговую аттестацию
+
+      - company: Университет Иннополис
+        position: Robotics Software Engineer, 0.5 ставки и проектные
+          контракты, очно
+        location: Иннополис
+        start_date: 2025-09
+        end_date: 2026-06
+        highlights:
+          - "**[LLM рой](https://github.com/Innopolis-Robotics-Society/llm_swarm):**
+            координация роя из 20 роботов на ROS 2 Humble, MAPF-планировщик и
+            Nav2 под управлением BehaviorTree. Мой блок: верхний слой управления
+            и обвязка LLM-советника в трёх каналах, тестовые сценарии и
+            бенчмаркинг моделей"
+          - "**[Контроль комплектации плат](https://github.com/Innopolis-Robotics-Society/robot-assistants):**
+            ROS2-нода pcb_inspector: детекция компонентов и отчёт по геометрии
+            относительно baseline; датасет на 12 классов, YOLO11s до mAP50 0.964
+            при 15.1 мс на RTX 3050m"
+          - "**[Робособака Unitree A1](https://github.com/Innopolis-Robotics-Society/project_fabian):**
+            ROS2 perception pipeline: YOLO11 pose через ONNX Runtime CUDA,
+            IoU-трекинг, оптимизация под Jetson Orin Nano 4GB до 15 FPS
+            end-to-end"
+
+      - company: Yandex Cloud
+        position: ML Engineer, контракт, удалённо
+        location: Удалённо
+        start_date: 2025-12
+        end_date: 2026-03
+        highlights:
+          - "Разработал сервис классификации изображений с обучением по мягким
+            меткам: сборка и балансировка датасета, бенчмарк CNN-бэкбонов,
+            релиз. Сервис вышел в продукт"
+          - "Работал с шумной мягкой разметкой на задаче оценки отзывов: искал
+            аномалии, держал под контролем QWK при сильном дисбалансе классов"
+
+    Достижения:
+      - name: "[1 место, Чемпионат России по программированию робототехники](https://media.innopolis.university/news/champions-in-industrial-robotics-programming/)"
+        date: 2025-12
+        highlights:
+          - "Федерация спортивного программирования. Финал: пять задач
+            автоматизации на манипуляторах Promobot M Edu, 13 команд из 8
+            регионов"
+      - name: "[2 место, хакатон Tenderhack](https://t.me/universityinnopolis/3177)"
+        date: 2026-03
+        highlights:
+          - "Поиск сопоставимых товаров для обоснования начальной цены закупки:
+            BM25, эмбеддинги, ранжирование"
+
+    Проекты:
+      - name: "[ViKi](https://github.com/artyomzifir/ViKi)"
+        start_date: 2026-05
+        end_date: present
+        highlights:
+          - Дипломная научная работа. Пайплайн vision-to-kinematics для
+            имитационного обучения манипулятора
+          - Многокамерная RGB-D запись демонстраций, оценка позы и ретаргетинг
+            движений на кинематику робота
+
+      - name: "[Cinematic Navigation from 3D Gaussian Splatting](https://github.com/artyomzifir/cinematic-navigation-cv)"
+        date: 2026-03
+        highlights:
+          - "GPU-пайплайн облёта 3DGS-сцены: два планировщика камеры,
+            YOLO-детекция с обратной проекцией в мировые координаты, revisit pass"
+
+    Лидерство:
+      - bullet: "**[Innopolis Robotics Society](https://github.com/Innopolis-Robotics-Society)**,
+          сооснователь студенческого робототехнического сообщества: собираем
+          команды на хакатоны и чемпионаты, ведём проекты и менторим
+          первокурсников"
+      - bullet: "Амбассадор Young && Yandex, топ-60 из 7000+ заявок;
+          организовал внутренний хакатон на 70+ участников"
+
+    Навыки:
+      - label: Robotics / CV
+        details: ROS2, Nav2, BehaviorTree, Gazebo, MuJoCo, URDF, OpenCV, YOLO,
+          ONNX Runtime, Jetson, CUDA
+      - label: ML / NLP
+        details: PyTorch, LLM, VLM, RAG, гибридный поиск, эмбеддинги,
+          ранжирование, fine-tuning
+      - label: Systems & Data
+        details: Python, C++, Linux, Bash, Docker, Git, NumPy, Pandas,
+          scikit-learn
+      - label: Языки
+        details: русский, английский
+
+design:
+  theme: zifir
+  page:
+    size: a4
+    top_margin: "1.0cm"
+    bottom_margin: "0.9cm"
+    left_margin: "1.4cm"
+    right_margin: "1.4cm"
+    show_top_note: false
+    show_footer: false
+  typography:
+    line_spacing: "0.72em"
+    alignment: justified
+    font_family:
+      body: Nunito
+      connections: Nunito
+      name: Montserrat
+      headline: Montserrat
+      section_titles: Montserrat
+    font_size:
+      body: "8.6pt"
+      name: "21pt"
+      headline: "9.5pt"
+      connections: "9pt"
+      section_titles: "1.15em"
+    small_caps:
+      name: false
+      headline: false
+      section_titles: false
+    bold:
+      name: true
+      headline: false
+      connections: false
+      section_titles: true
+  colors:
+    body: rgb(26, 26, 25)
+    name: rgb(49, 81, 30)
+    headline: rgb(49, 81, 30)
+    connections: rgb(49, 81, 30)
+    section_titles: rgb(49, 81, 30)
+    links: rgb(49, 81, 30)
+  header:
+    alignment: left
+    space_below_name: "0.32cm"
+    space_below_headline: "0.15cm"
+    space_below_connections: "0.2cm"
+    connections:
+      separator: "|"
+      show_icons: false
+      display_urls_instead_of_usernames: true
+  links:
+    underline: true
+    show_external_link_icon: false
+  section_titles:
+    type: with_full_line
+    line_thickness: "0.06cm"
+    space_above: "0.18cm"
+    space_below: "0.08cm"
+  sections:
+    space_between_regular_entries: "0.4em"
+    space_between_text_based_entries: "0.15em"
+  entries:
+    short_second_row: false
+    side_space: "0cm"
+    highlights:
+      space_between_items: "0.12cm"
+  templates:
+    experience_entry:
+      main_column: "**COMPANY**\n*POSITION*\nSUMMARY\nHIGHLIGHTS"
+      date_and_location_column: DATE
+    normal_entry:
+      main_column: "**NAME**\nSUMMARY\nHIGHLIGHTS"
+      date_and_location_column: DATE
+    education_entry:
+      main_column: "**INSTITUTION**\nDEGREE_WITH_AREA\nSUMMARY\nHIGHLIGHTS"
+      date_and_location_column: DATE
+      degree_column: null
+
+locale:
+  language: russian
+  present: н.в.
+
+settings:
+  current_date: today
+  render_command:
+    output_folder: rendercv_output
+    typst_path: OUTPUT_FOLDER/Artyom_Tuzov_CV_RU.typ
+    pdf_path: OUTPUT_FOLDER/Artyom_Tuzov_CV_RU.pdf
+    dont_generate_markdown: true
+    dont_generate_html: true
+    dont_generate_png: true
+  pdf_title: Артём Тузов, резюме

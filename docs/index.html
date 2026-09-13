@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Artyom Tuzov — CV</title>
+<style>
+  :root{
+    --paper: #faf9f6;
+    --sheet: #ffffff;
+    --ink: #1b1b18;
+    --muted: #6b675c;
+    --rule: #dcd9cf;
+    --accent: #2b6e63;
+    --accent-ink: #f3f6f5;
+    --radius: 3px;
+  }
+
+  *{ box-sizing: border-box; }
+
+  html,body{
+    margin:0;
+    padding:0;
+    background:var(--paper);
+    color:var(--ink);
+  }
+
+  body{
+    font-family: Georgia, 'Iowan Old Style', 'Palatino Linotype', 'URW Palladio L', serif;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    min-height:100vh;
+    padding: 2.75rem 1.25rem 2rem;
+  }
+
+  .mono{
+    font-family: ui-monospace, 'SF Mono', 'JetBrains Mono', 'Roboto Mono', Menlo, Consolas, monospace;
+    letter-spacing: .02em;
+  }
+
+  header{
+    width:100%;
+    max-width: 760px;
+    text-align:center;
+    margin-bottom: 1.75rem;
+  }
+
+  h1{
+    font-size: clamp(1.9rem, 4vw, 2.5rem);
+    font-weight: 400;
+    letter-spacing: .01em;
+    margin: 0 0 .3rem;
+  }
+
+  .eyebrow{
+    font-size: .72rem;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin: 0 0 1.4rem;
+  }
+
+  /* --- language switch: rocker-style toggle --- */
+  .switch{
+    --w: 148px;
+    position: relative;
+    width: var(--w);
+    height: 40px;
+    margin: 0 auto;
+    background: var(--sheet);
+    border: 1px solid var(--rule);
+    border-radius: 999px;
+    padding: 3px;
+    display:flex;
+    box-shadow: inset 0 1px 2px rgba(0,0,0,.04);
+  }
+
+  .switch .thumb{
+    position:absolute;
+    top:3px; left:3px;
+    width: calc(var(--w)/2 - 3px);
+    height: 34px;
+    background: var(--accent);
+    border-radius: 999px;
+    transition: transform .18s ease;
+  }
+
+  .switch[data-lang="ru"] .thumb{
+    transform: translateX(calc(var(--w)/2 - 3px));
+  }
+
+  .switch button{
+    position:relative;
+    z-index:1;
+    flex:1;
+    border:0;
+    background:transparent;
+    cursor:pointer;
+    font-size: .8rem;
+    font-weight: 600;
+    color: var(--muted);
+    transition: color .18s ease;
+    border-radius: 999px;
+  }
+
+  .switch button[aria-pressed="true"]{
+    color: var(--accent-ink);
+  }
+
+  .switch button:focus-visible{
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+  }
+
+  main{
+    width:100%;
+    max-width: 760px;
+    flex:1;
+    display:flex;
+    flex-direction:column;
+  }
+
+  .sheet{
+    background:var(--sheet);
+    border:1px solid var(--rule);
+    border-radius: var(--radius);
+    box-shadow: 0 12px 28px -18px rgba(27,27,24,.35);
+    flex:1;
+    min-height: 60vh;
+    overflow:hidden;
+  }
+
+  .sheet iframe{
+    width:100%;
+    height: 78vh;
+    min-height: 480px;
+    border:0;
+    display:block;
+  }
+
+  .below{
+    display:flex;
+    justify-content:space-between;
+    align-items:baseline;
+    gap: 1rem;
+    margin-top: .9rem;
+    font-size: .78rem;
+    color: var(--muted);
+  }
+
+  .below a{
+    color: var(--ink);
+    text-decoration: none;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .below a:hover{
+    border-bottom-color: var(--accent);
+    color: var(--accent);
+  }
+
+  footer{
+    width:100%;
+    max-width: 760px;
+    text-align:center;
+    margin-top: 2rem;
+    font-size: .72rem;
+    color: var(--muted);
+  }
+
+  footer a{ color: var(--muted); }
+
+  @media (max-width: 480px){
+    .sheet iframe{ height: 68vh; }
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    .switch .thumb, .switch button{ transition: none; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1 id="name">Artyom Tuzov</h1>
+  <p class="eyebrow mono" id="headline">ML / Computer Vision Engineer — Robotics</p>
+
+  <div class="switch" id="switch" data-lang="en" role="group" aria-label="CV language">
+    <span class="thumb" aria-hidden="true"></span>
+    <button type="button" id="btn-en" class="mono" aria-pressed="true">EN</button>
+    <button type="button" id="btn-ru" class="mono" aria-pressed="false">RU</button>
+  </div>
+</header>
+
+<main>
+  <div class="sheet">
+    <iframe id="pdf-frame" src="Artyom_Tuzov_CV_EN.pdf" title="CV preview"></iframe>
+  </div>
+  <div class="below">
+    <span class="mono" id="updated-label"></span>
+    <a id="download-link" class="mono" href="Artyom_Tuzov_CV_EN.pdf" download>download pdf ↓</a>
+  </div>
+</main>
+
+<footer>
+  <a href="https://github.com/artyomzifir/artyomzifir.github.io">source</a>
+</footer>
+
+<script>
+  const files = {
+    en: { pdf: 'Artyom_Tuzov_CV_EN.pdf', headline: 'ML / Computer Vision Engineer — Robotics' },
+    ru: { pdf: 'Artyom_Tuzov_CV_RU.pdf', headline: 'ML / CV инженер — робототехника' }
+  };
+
+  const switchEl = document.getElementById('switch');
+  const btnEn = document.getElementById('btn-en');
+  const btnRu = document.getElementById('btn-ru');
+  const frame = document.getElementById('pdf-frame');
+  const dl = document.getElementById('download-link');
+  const headline = document.getElementById('headline');
+
+  function setLang(lang){
+    const f = files[lang];
+    switchEl.dataset.lang = lang;
+    btnEn.setAttribute('aria-pressed', String(lang === 'en'));
+    btnRu.setAttribute('aria-pressed', String(lang === 'ru'));
+    frame.src = f.pdf;
+    frame.title = lang === 'ru' ? 'Резюме — предпросмотр' : 'CV preview';
+    dl.href = f.pdf;
+    headline.textContent = f.headline;
+    document.documentElement.lang = lang;
+    document.title = lang === 'ru' ? 'Артём Тузов — Резюме' : 'Artyom Tuzov — CV';
+    try { localStorage.setItem('cv-lang', lang); } catch (e) {}
+  }
+
+  btnEn.addEventListener('click', () => setLang('en'));
+  btnRu.addEventListener('click', () => setLang('ru'));
+
+  let initial = 'en';
+  try {
+    const saved = localStorage.getItem('cv-lang');
+    if (saved === 'en' || saved === 'ru') {
+      initial = saved;
+    } else if ((navigator.language || '').toLowerCase().startsWith('ru')) {
+      initial = 'ru';
+    }
+  } catch (e) {}
+
+  setLang(initial);
+</script>
+
+</body>
+</html>
