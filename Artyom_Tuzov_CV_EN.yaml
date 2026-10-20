@@ -85,6 +85,11 @@ cv:
             imbalance"
 
     Awards:
+      - name: "[2nd place, Future of Medicine case championship](https://artyomzifir.github.io/artifacts/technical-achievements/future-medicine-diffuse-tomography-second-degree-2026.pdf)"
+        date: 2026-10
+        highlights:
+          - "II-degree diploma in the Diffuse Tomography track; team ARTYOMY,
+            Pirogov University and Y Cloud"
       - name: "[1st place, Russian Championship in Robotics Programming](https://media.innopolis.university/news/champions-in-industrial-robotics-programming/)"
         date: 2025-12
         highlights:
@@ -106,12 +111,6 @@ cv:
             imitation learning on a robot manipulator"
           - Multi-camera RGB-D capture of demonstrations, pose estimation and
             retargeting onto robot kinematics
-
-      - name: "[Cinematic Navigation from 3D Gaussian Splatting](https://github.com/artyomzifir/cinematic-navigation-cv)"
-        date: 2026-03
-        highlights:
-          - "GPU pipeline for flying through a 3DGS scene: two camera planners,
-            YOLO detection back-projected into world coordinates, revisit pass"
 
     Leadership:
       - bullet: "**[Innopolis Robotics Society](https://github.com/Innopolis-Robotics-Society)**,
