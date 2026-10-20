@@ -85,17 +85,17 @@ cv:
             imbalance"
 
     Awards:
-      - name: "[2nd place, Future of Medicine case championship](https://artyomzifir.github.io/artifacts/technical-achievements/future-medicine-diffuse-tomography-second-degree-2026.pdf)"
+      - name: "[2nd place, Future of Medicine case championship](https://github.com/artyomzifir/artyomzifir.github.io/blob/main/artifacts/technical-achievements/future-medicine-diffuse-tomography-second-degree-2026.pdf)"
         date: 2026-10
         highlights:
           - "Team solution: a TD-DOT pipeline for stroke classification, optode
             layout reconstruction, and lesion location, depth and volume estimation"
-      - name: "[2nd place, Tenderhack](https://artyomzifir.github.io/artifacts/technical-achievements/tender-hack-second-place-2026.pdf)"
+      - name: "[2nd place, Tenderhack](https://github.com/artyomzifir/artyomzifir.github.io/blob/main/artifacts/technical-achievements/tender-hack-second-place-2026.pdf)"
         date: 2026-03
         highlights:
           - "Matching comparable goods for initial procurement price estimation:
             BM25, embeddings, ranking"
-      - name: "[1st place, Russian Championship in Robotics Programming](https://artyomzifir.github.io/artifacts/technical-achievements/russian-robotics-programming-championship-first-place-results-2025.pdf)"
+      - name: "[1st place, Russian Championship in Robotics Programming](https://github.com/artyomzifir/artyomzifir.github.io/blob/main/artifacts/technical-achievements/russian-robotics-programming-championship-first-place-results-2025.pdf)"
         date: 2025-12
         highlights:
           - "Russian Federation of Sport Programming. Finals: five applied
