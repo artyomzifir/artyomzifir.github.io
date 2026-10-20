@@ -89,19 +89,19 @@ cv:
       - name: "[2 место, кейс-чемпионат «Будущее медицины»](https://artyomzifir.github.io/artifacts/technical-achievements/future-medicine-diffuse-tomography-second-degree-2026.pdf)"
         date: 2026-10
         highlights:
-          - "Диплом II степени по треку «Диффузная томография»; команда
-            «АРТЁМЫ», Пироговский университет и Y Cloud"
-      - name: "[1 место, Чемпионат России по программированию робототехники](https://media.innopolis.university/news/champions-in-industrial-robotics-programming/)"
+          - "Командное решение: пайплайн TD-DOT для классификации инсульта,
+            восстановления схемы оптодов и оценки положения, глубины и объёма очага"
+      - name: "[2 место, хакатон Tenderhack](https://artyomzifir.github.io/artifacts/technical-achievements/tender-hack-second-place-2026.pdf)"
+        date: 2026-03
+        highlights:
+          - "Поиск сопоставимых товаров для обоснования начальной цены закупки:
+            BM25, эмбеддинги, ранжирование"
+      - name: "[1 место, Чемпионат России по программированию робототехники](https://artyomzifir.github.io/artifacts/technical-achievements/russian-robotics-programming-championship-first-place-results-2025.pdf)"
         date: 2025-12
         highlights:
           - "Федерация спортивного программирования. Финал: пять задач
             автоматизации на манипуляторах Promobot M Edu, 13 команд из 8
             регионов"
-      - name: "[2 место, хакатон Tenderhack](https://t.me/universityinnopolis/3177)"
-        date: 2026-03
-        highlights:
-          - "Поиск сопоставимых товаров для обоснования начальной цены закупки:
-            BM25, эмбеддинги, ранжирование"
 
     Проекты:
       - name: "[ViKi](https://github.com/artyomzifir/ViKi)"
